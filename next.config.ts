@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  rewrites: async () => [
+    {
+      source: "/api/get-postman-echo",
+      destination: "https://postman-echo.com/get",
+    },
+  ],
 };
 
 export default nextConfig;
